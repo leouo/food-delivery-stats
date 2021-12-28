@@ -14,7 +14,7 @@ const createDbInstance = ({ fileName }) => {
 
 const setDbSchema = async dbInstance => {
   await dbInstance.read()
-  dbInstance.data ||= config.dbSchema
+  dbInstance.data = dbInstance.data || config.dbSchema
   await dbInstance.write()
 }
 
