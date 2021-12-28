@@ -7,7 +7,7 @@ const setYearAndMonthsColumns = order => {
   const year = getOrderYear(order)
   const month = getOrderMonth(order)
 
-  yearVesusMonthsOrders[month] ||= {} 
+  yearVesusMonthsOrders[month] = yearVesusMonthsOrders[month] || {} 
   yearVesusMonthsOrders[month][year] = 0
 }
 
