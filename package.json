@@ -1,0 +1,15 @@
+{
+  "name": "food-delivery-stats",
+  "version": "1.0.0",
+  "description": "See how much money you are spending with food delivery services",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "Leonardo Cesar Morais <leonardoccpmorais@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "commander": "^8.3.0",
+    "lowdb": "^3.0.0"
+  }
+}
