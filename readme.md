@@ -38,5 +38,5 @@ node index.js -r
 
 __Ifood__:
 ```js
-cookieStore.get('aAccessToken').then(({ value }) => console.log(value))
+copy(await cookieStore.get('aAccessToken').then(({ value }) => value))
 ```
