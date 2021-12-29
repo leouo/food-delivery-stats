@@ -33,6 +33,14 @@ node index.js --display-reports
 node index.js -r
 ```
 
+You can also specify one or more delivery service to fetch or display data:
+```sh
+# displaying stats for ifood only
+node index.js -r -s ifood
+# fetching data for uberEats only
+node index.js -f -s uberEats
+```
+
 ## How to get your token
 > Run the following code inside console tab of devtools with your service page orders open
 
