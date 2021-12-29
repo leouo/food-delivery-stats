@@ -14,7 +14,7 @@ npm i
 Set your services access tokens inside the `config.js` file:
 ```js
 tokens: {
-  ifood: "<YOUR-JWT-TOKWN>",
+  ifood: "<YOUR-JWT-TOKEN>",
 }
 ```
 > See how to get your service token in HOW TO GET YOUR TOKEN section
@@ -34,9 +34,16 @@ node index.js -r
 ```
 
 ## How to get your token
-> Run the following code inside console of devtools with your service page orders open.
+> Run the following code inside console tab of devtools with your service page orders open
 
 __Ifood__:
 ```js
 copy(await cookieStore.get('aAccessToken').then(({ value }) => value))
+```
+
+__uberEats__:
+
+First with devtools open, go to Application (tab) > Storage > Cookies and select `https://www.ubereats.com`. Uncheck `HttpOnly` option and run inside the console tab: 
+```js
+copy(await cookieStore.get('sid').then(({ value }) => value))
 ```
