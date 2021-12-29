@@ -4,6 +4,9 @@ export default {
     uberEats: "",
   },
   dbSchema: {
-    orders: [],
+    orders: {
+      uberEats: [],
+      ifood: []
+    },
   }
 }

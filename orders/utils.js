@@ -1,8 +1,8 @@
-export const getOrderYear = order => new Date(order?.createdAt).getFullYear()
+export const getOrderYear = order => new Date(order?.date).getFullYear()
 
-export const getOrderMonth = order => new Date(order?.createdAt).toLocaleString('pt-BR', { month: 'long' })
+export const getOrderMonth = order => new Date(order?.date).toLocaleString('pt-BR', { month: 'long' })
 
-export const getOrderValue = order => order?.payments?.total?.value
+export const getOrderValue = order => order?.amount
 
 export const convertOrderValueToCurrency = value => {
   const orderValueWithCents = value / 100

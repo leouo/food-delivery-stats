@@ -1,11 +1,18 @@
+import supportedDeliveryServices from '../services/delivery-services.js'
 import db from '../db/instance.js'
 
-export const insertOrders = async orders => {
+export const ordersSchema = supportedDeliveryServices.reduce((schema, { name }) => ({
+  ...schema,
+  [name]: []
+}), {})
+
+export const insertOrders = async (orders, { deliveryServiceName, formatter }) => {
   await db.read()
 
-  orders.forEach(order => {
-      db.data.orders.push(order)
-  });
+  formatter(orders)
+    .forEach(order => {
+      db.data.orders[deliveryServiceName].push(order)
+    });
 
-  db.write()
+  await db.write()
 }

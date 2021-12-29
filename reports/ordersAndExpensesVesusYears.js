@@ -18,13 +18,13 @@ const setYearsColumns = order => {
 }
 
 const setColumnsValues = order => {
-  const value = getOrderValue(order)
+  const amount = getOrderValue(order)
   const year = getOrderYear(order)
 
   ordersVesusYears['Pedidos'].total += 1
   ordersVesusYears['Pedidos'][year] += 1
-  ordersVesusYears['Gastos'].total += value
-  ordersVesusYears['Gastos'][year] += value
+  ordersVesusYears['Gastos'].total += amount
+  ordersVesusYears['Gastos'][year] += amount
 }
 
 const displayOrdersVesusYears = orders => {
