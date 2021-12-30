@@ -5,7 +5,6 @@ export const getOrderMonth = order => new Date(order?.date).toLocaleString('pt-B
 export const getOrderValue = order => order?.amount
 
 export const convertOrderValueToCurrency = value => {
-  const orderValueWithCents = value / 100
   const currencyConfig = {
     style: 'currency',
     currency: 'BRL',
@@ -13,5 +12,5 @@ export const convertOrderValueToCurrency = value => {
 
   return new Intl
     .NumberFormat('pt-BR', currencyConfig)
-    .format(orderValueWithCents)
+    .format(value)
 }

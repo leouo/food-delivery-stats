@@ -16,7 +16,7 @@ export default orders => orders.map(({ baseEaterOrder, fareInfo, storeInfo }) =>
 
     return ({
         id: baseEaterOrder.uuid,
-        amount: fareInfo.totalPrice,
+        amount: fareInfo.totalPrice / 100,
         date,
         status,
         store: storeInfo.title,

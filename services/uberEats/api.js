@@ -7,14 +7,12 @@ const UBEREATS_ORDERS_ENDPOINT = `https://www.ubereats.com/api/getPastOrdersV1`
 const uberEatsOrders = []
 
 const fetchUberEatsOrders = async (nextOrderUuiOffset) => {
-    console.log('UBEREATS_ORDERS_FETCHER - START')
-
     try {
         const { data: { data: { ordersMap, orderUuids } } } = await axios(UBEREATS_ORDERS_ENDPOINT, {
             method: 'POST',
             headers: {
                 'x-csrf-token': 'x',
-                cookie: `sid=${config.tokens.uberEats}`,
+                cookie: `${config.tokens.uberEats}`,
             },
             data: {
                 lastWorkflowUUID: nextOrderUuiOffset,
@@ -33,9 +31,8 @@ const fetchUberEatsOrders = async (nextOrderUuiOffset) => {
             await fetchUberEatsOrders(currentOrderUuiOffset)
         }
     } catch (error) {
-        console.log('UBEREATS_ORDERS', error)
+        console.log('UBEREATS_ORDERS_FETCHER - ERROR', error)
     } finally {
-        console.log('UBEREATS_ORDERS_FETCHER - END')
         return uberEatsOrders
     }
 }

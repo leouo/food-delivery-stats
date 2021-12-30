@@ -9,8 +9,6 @@ const getIfoodOrdersURL = pageNumber => `${IFOOD_ORDERS_ENDPOINT}?page=${pageNum
 const ifoodOrders = []
 
 const fetchIfoodOrders =  async (pageNumber = 0) => {
-  console.log('IFOOD_ORDERS_FETCHER - START')
-
   try {
     const { data: apiOrders } = await axios(getIfoodOrdersURL(pageNumber), {
       headers: {
@@ -30,8 +28,7 @@ const fetchIfoodOrders =  async (pageNumber = 0) => {
   } catch (error) {
     console.log('IFOOD_ORDERS_FETCHER - ERROR:', error)
   } finally {
-      console.log('IFOOD_ORDERS_FETCHER - END')
-      return ifoodOrders
+    return ifoodOrders
   }
 }
 
