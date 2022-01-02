@@ -16,7 +16,7 @@ const fetchUberTrips = async (nextCursorOffset = 0) => {
                 cookie: config.tokens.uber.token,
             },
             data: {
-                limit: 50,
+                limit: 10,
                 offset: `${nextCursorOffset}`,
                 range: {
                     fromTime: null,
