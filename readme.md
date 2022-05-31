@@ -66,9 +66,9 @@ node index.js -r
 You can also specify one or more delivery service to fetch or display data:
 ```sh
 # displaying stats for ifood only
-node index.js -r -s ifood
-# fetching data for uberEats only
-node index.js -f -s uberEats
+node index.js -r -s ifood 
+# fetching data for ifood and uberEats only
+node index.js -f -s ifood uberEats
 ```
 
 ## How to get your token
