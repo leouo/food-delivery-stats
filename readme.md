@@ -1,7 +1,6 @@
 # Food Delivery Stats
 See how much money you are spending with food delivery services 🤑
 
-```markdown
 ```bash
 $ node index.js -r -s ifood uber
 
@@ -29,7 +28,6 @@ $ node index.js -r -s ifood uber
 │ novembro  │ 'R$ 320,66' │ 'R$ 261,54' │ 'R$ 377,82' │               │
 │ dezembro  │ 'R$ 96,98'  │ 'R$ 191,26' │ 'R$ 671,54' │               │
 └───────────┴─────────────┴─────────────┴─────────────┴───────────────┘
-```
 ```
 
 ## System requirements
